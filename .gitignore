@@ -208,3 +208,8 @@ ENV/
 
 # mkdocs documentation
 /site
+
+# image files
+*.png
+*.jpg
+*.jpeg
