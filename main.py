@@ -1,16 +1,25 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import utils
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+URL = "https://www.spotifycodes.com/downloadCode.php?uri=jpeg%2F000000%2Fwhite%2F640%2Fspotify%3Aalbum%3A4m2880jivSbbyEGAKfITCa"
 
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    share_link = input("Enter link of song, album, artist or user: ")
+
+    data = utils.get_link_data(share_link)
+
+    share_link.rstrip()
+
+    print(data)
+
+"""
+    if share_link.lstrip("https: // open.spotify.com /").startswith("track"
+
+    https: // open.spotify.com / track / 0
+    oks4FnzhNp5QPTZtoet7c?si = dc6855b6efa54ca0
+
+    https: // open.spotify.com / album / 4
+    m2880jivSbbyEGAKfITCa?si = 1_6
+    htsJURnyVXujlsCiGYw
+    """
