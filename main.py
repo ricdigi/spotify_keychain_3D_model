@@ -1,3 +1,5 @@
+import numpy as np
+import cadquery as cq
 import utils
 import requests
 from PIL import Image
@@ -46,10 +48,14 @@ if __name__ == '__main__':
                 curr_height += 1
 
         if at_bar and curr_height > max_height_of_single_bar:
-            max_height_of_single_bar = curr_height
+            max_height_of_single_bar = np.round_(curr_height/20)
         elif not at_bar and max_height_of_single_bar > 0:
             bar_heights.append(max_height_of_single_bar)
             max_height_of_single_bar = 0
 
-
     print(f"There are {len(bar_heights)} bars of heights {bar_heights}")
+
+    base_model = cq.importers.importStep('base_model.step')
+    face = utils.generate_bars(bar_heights, base_model)
+    cq.exporters.export(face, 'model.stl')
+
