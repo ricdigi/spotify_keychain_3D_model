@@ -26,3 +26,13 @@ def generate_bars(bar_heights, model):
 
     return model
 
+
+def draw_bottom_text(text, model):
+    model = (
+        model
+        .center(15,7.5)
+        .text(text, 8, 1)
+        #.rotateAboutCenter((1, 0, 0), 180)
+
+    )
+    return model
