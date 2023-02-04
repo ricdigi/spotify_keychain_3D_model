@@ -48,7 +48,7 @@ if __name__ == '__main__':
                 curr_height += 1
 
         if at_bar and curr_height > max_height_of_single_bar:
-            max_height_of_single_bar = np.round_(curr_height/20)
+            max_height_of_single_bar = curr_height/20
         elif not at_bar and max_height_of_single_bar > 0:
             bar_heights.append(max_height_of_single_bar)
             max_height_of_single_bar = 0

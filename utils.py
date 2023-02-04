@@ -16,7 +16,7 @@ def generate_bars(bar_heights, model):
 
     for bar in bar_heights:
         model = (
-           model.pushPoints([(15 + curr_bar * 1.8, 7.5)])
+           model.pushPoints([(15.5 + curr_bar * 1.88, 7.5)])
            .sketch()
            .slot(9/5 * bar, 1, 90)
            .finalize()
