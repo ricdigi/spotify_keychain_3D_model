@@ -1,0 +1,4 @@
+cadquery
+requests
+pillow
+
